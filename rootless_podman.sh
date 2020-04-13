@@ -10,7 +10,6 @@ read -p "Quel est l'user a add dans les fichiers subgid/subuid ?" myUserName
 
 echo ${myUserName}
 
-
 if [ ! -f /etc/sysctl.d/userns.conf ]
 then
     echo "kernel.unprivileged_userns_clone=1" > /etc/sysctl.d/userns.conf
@@ -18,7 +17,7 @@ else
     echo "Verifier si kernel.unprivileged_userns_clone=1 dans le fichier [ /etc/sysctl.d/userns.conf ]"
 fi
     
-if [ ! /etc/subgid ] && [ ! -f /etc/subuid ]
+if [ ! -f /etc/subgid ] && [ ! -f /etc/subuid ]
 then
     echo "Creation des fichiers subgid et subuid en cours..."
     touch /etc/subgid
