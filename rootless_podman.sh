@@ -4,9 +4,10 @@
 #Les fichiers subgid et subuid seront crees
 #l'utilisateur a renseigner au lancement du script est l'utilisateur non root et existant sur le systeme.
 # faire un chmod +x nomduscript pour rendre exeecutable le script
+#Voir aussi ce tuto auquel je me suis servi pour creer le script: https://critchlow.xyz/2019/09/23/rootless-podman.html
 
 #Ask nom user a add pour subgid et subuid
-read -p "Quel est l'user a add dans les fichiers subgid/subuid ?" myUserName
+read -p "Quel est l'user a add dans les fichiers subgid/subuid ? " myUserName
 
 echo ${myUserName}
 
