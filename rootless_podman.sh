@@ -18,7 +18,7 @@ else
     echo "Verifier si kernel.unprivileged_userns_clone=1 dans le fichier [ /etc/sysctl.d/userns.conf ]"
 fi
     
-if [ ! /etc/subgid ] && [! /etc/subuid ]
+if [ ! /etc/subgid ] && [ ! -f /etc/subuid ]
 then
     echo "Creation des fichiers subgid et subuid en cours..."
     touch /etc/subgid
