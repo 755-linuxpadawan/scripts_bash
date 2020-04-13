@@ -26,4 +26,7 @@ then
     echo "Ajout de l'uitisateur avec extension de uid/gid en cours..."
     usermod --add-subuids 100000-165535 ${myUserName}
     usermod --add-subgids 100000-165535 ${myUserName}
+else
+    usermod --add-subuids 100000-165535 ${myUserName}
+    usermod --add-subgids 100000-165535 ${myUserName}
 fi
